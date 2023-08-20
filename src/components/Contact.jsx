@@ -1,42 +1,21 @@
 import React from 'react'
 
+
 const Contact = () => {
     return (
         <footer className='footer'>
-            <form class="form">
-                <h3>Contactame</h3>
-                <div class="flex">
-                    <label>
-                        <input required="" placeholder="" type="text" class="input" />
-                        <span>first name</span>
-                    </label>
-
-                    <label>
-                        <input required="" placeholder="" type="text" class="input" />
-                        <span>last name</span>
-                    </label>
+            <div className='about-all'>
+                <div className='icons-all'>
+                    <a className='icons-now' href='https://t.me/HelenAfanador' Button='icons'><i class="fa-brands fa-telegram"></i></a>
+                    <a className='icons-now' href='https://www.linkedin.com/in/helen-afanador-193a72b8/' ><i class="fa-brands fa-linkedin"></i></a>
                 </div>
+            </div>
+            <form class="form">
+                <div class="title">Contactame</div>
+                <input type="text" placeholder="Correo" class="input" />
+                <textarea placeholder="Escribe tu mensaje"></textarea>
 
-                <label>
-                    <input required="" placeholder="" type="email" class="input" />
-                    <span>email</span>
-                </label>
-
-                <label>
-                    <input required="" type="tel" placeholder="" class="input" />
-                    <span>contact number</span>
-                </label>
-                <label>
-                    <textarea required="" rows="3" placeholder="" class="input01"></textarea>
-                    <span>message</span>
-                </label>
-
-                <button class="fancy" href="#">
-                    <span class="top-key"></span>
-                    <span class="text">submit</span>
-                    <span class="bottom-key-1"></span>
-                    <span class="bottom-key-2"></span>
-                </button>
+                <button >Enviar</button>
             </form>
         </footer>
     )
