@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background-color: #FFEED9;
   font-family: 'Geologica', sans-serif;
@@ -48,9 +53,13 @@ body {
 
 .section-projects {
   background-color: #ffddbf4d;
-  padding: 3rem 5rem;
+  padding: 2rem 5rem;
   color: #403930;
   height: auto;
+  margin: 10rem;
+  width: auto;
+
+  position: relative;
 }
 
 .title-2 {
@@ -60,26 +69,36 @@ body {
 }
 
 .imagen-project {
+  display: flex;
   width: 15rem;
   border-radius: .8rem;
   position: relative;
-  animation: salto 0.9s infinite;
+  margin-top: auto;
+  aspect-ratio: 4/3;
+
 }
 
 .projects-all {
   display: flex;
   background-color: #f8b9826b;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
-  width: 80rem;
-  gap: 35rem
+  width: 30rem;
+  gap: 30rem
 }
 
 .project-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
+  animation: salto 0.9s infinite;
+}
+
+.projects-container2 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: salto 0.9s infinite;
 }
 
 .section-about {
@@ -104,10 +123,9 @@ body {
 
 .icons-all {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   margin-bottom: 1rem;
-  width: 6rem;
+  width: auto;
   height: 3rem;
 
 }
@@ -122,36 +140,25 @@ body {
   font-size: 3rem;
   width: 100px;
   margin: 0rem;
-  position: relative;
-  left: 20%;
-  animation: salto 0.8s infinite;
   color: #f8b982;
 }
 
+/* 
 .icons-now::before {
   content: '';
   display: inline-block;
   width: 100px;
   height: 100px;
-}
-
-@keyframes salto {
-
-  0%,
-  100% {
-    top: 0;
-  }
-
-  30% {
-    top: -25px;
-  }
-}
+} */
 
 .footer {
   background-color: #ffddbfa2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: auto;
+  width: auto;
 }
 
 .cube-container {
@@ -260,13 +267,13 @@ body {
   left: 100%;
   padding: 1rem;
   display: inline-block;
-  height: 30px;
+  height: auto;
 }
 
 .switch input {
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: auto;
+  height: auto;
 }
 
 .slider {
@@ -313,57 +320,6 @@ body {
   height: 24px;
 }
 
-/* .switch:hover */
-.sun svg {
-  animation: rotate 15s linear infinite;
-}
-
-@keyframes rotate {
-
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* .switch:hover */
-.moon svg {
-  animation: tilt 5s linear infinite;
-}
-
-@keyframes tilt {
-
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(-10deg);
-  }
-
-  75% {
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.input:checked+.slider {
-  background-color: #8b0d46;
-}
-
-.input:focus+.slider {
-  box-shadow: 0 0 1px #53182f85;
-}
-
-.input:checked+.slider:before {
-  transform: translateX(30px);
-}
 
 .switch {
   display: grid;
@@ -682,8 +638,10 @@ button:hover .filled {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
+  width: 50vw;
   gap: 20px;
-  max-width: 600px;
+  max-width: 1000px;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -934,7 +892,7 @@ button:hover .filled {
   padding: 0.25rem;
   width: 300px;
   font-size: 14px;
-  animation: salto 0.6s;
+  animation: salto 0.s;
 }
 
 .radio-inputs .radio {
@@ -969,7 +927,7 @@ button:hover .filled {
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  width: 300px;
+
   background-color: white;
   padding: 20px;
   border-radius: 10px;
